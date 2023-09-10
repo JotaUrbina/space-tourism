@@ -1,0 +1,57 @@
+---
+import destinations from "../../public/destination.json";
+
+const { id } = Astro.params;
+const destination = destinations[id];
+---
+
+{
+  (
+    <section>
+      <div class="max-w-sm">
+        <img
+          class="rounded-t-lg"
+          src={destination.img}
+          alt=""
+        />
+
+        <div class="p-5">
+          <h5 class="title-1">{destination.name}</h5>
+          <p
+            class="mb-3
+        font-normal
+        text-secondary"
+          >
+            {destination.description}
+          </p>
+        </div>
+
+        <div class="p-5">
+          <p
+            class="mb-3
+      font-normal
+      text-secondary"
+          >
+            AVG. DISTANCE
+          </p>
+          <h5 class="text-4xl text-secondary">
+            {destination.distance}
+          </h5>
+        </div>
+
+        <div class="p-5">
+          <p
+            class="mb-3
+        font-normal
+        text-secondary"
+          >
+            EST. TRAVEL TIME
+          </p>
+          <h5 class="text-4xl text-secondary">
+            {destination.travelTime}
+          </h5>
+        </div>
+      </div>
+    </section>
+  )
+}

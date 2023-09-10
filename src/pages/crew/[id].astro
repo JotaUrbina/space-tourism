@@ -1,0 +1,19 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CrewNav from "../../components/CrewNav.astro";
+import CrewCard from "../../components/CrewCard.astro";
+
+export const getStaticPaths = () => {
+  return [
+    { params: { id: "hurley" } },
+    { params: { id: "shuttleworth" } },
+    { params: { id: "glover" } },
+    { params: { id: "ansari" } },
+  ];
+};
+---
+
+<Layout title="The Crew">
+  <CrewNav />
+  <CrewCard />
+</Layout>

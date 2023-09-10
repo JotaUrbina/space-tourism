@@ -1,0 +1,37 @@
+---
+import crew from "../../public/crew.json";
+
+const { id } = Astro.params;
+const employee = crew[id];
+---
+
+{
+  (
+    <section>
+      <div class="max-w-sm">
+        <div class="p-5">
+          <p
+            class="mb-3
+          font-normal
+          text-secondary"
+          >
+            {employee.role}
+          </p>
+          <h5 class="title-1">{employee.name}</h5>
+          <p
+            class="mb-3
+          font-normal
+          text-secondary"
+          >
+            {employee.description}
+          </p>
+        </div>
+        <img
+          class="rounded-t-lg"
+          src={employee.img}
+          alt=""
+        />
+      </div>
+    </section>
+  )
+}

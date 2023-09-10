@@ -1,0 +1,22 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import DestinationNav from "../../components/DestinationNav.astro";
+import DestinationCard from "../../components/DestinationCard.astro";
+
+const { id } = Astro.params;
+// console.log(id);
+
+export const getStaticPaths = () => {
+  return [
+    { params: { id: "moon" } },
+    { params: { id: "mars" } },
+    { params: { id: "europa" } },
+    { params: { id: "titan" } },
+  ];
+};
+---
+
+<Layout title="Destination 2">
+  <DestinationNav />
+  <DestinationCard />
+</Layout>
