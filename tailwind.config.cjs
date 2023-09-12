@@ -14,7 +14,11 @@ module.exports = {
       secondary: "#FFFFFF",
       highlight: "#D0D6F9",
     },
-    extend: {},
+    extend: {
+      screens: {
+        mdd: "899px",
+      },
+    },
   },
   plugins: [require("flowbite/plugin")],
 };

@@ -9,17 +9,16 @@ const destination = destinations[id];
 {
   (
     <section class="screen">
-      <div class="w-full h-full grid grid-rows-2 gap-4">
-        <div class="mt-4 flex flex-col justify-between items-center">
-          <img
-            class="w-4/5 h-4/5 object-contain "
-            src={destination.img}
-            alt=""
-          />
+      <div class="w-full h-full max-w-lg grid grid-rows-2 place-items-center gap-4 mdd:grid-cols-2 mdd:grid-rows-none mdd:max-w-7xl">
+        <img
+          class="w-4/5 h-4/5 object-contain "
+          src={destination.img}
+          alt=""
+        />
+
+        <article class="px-5 flex flex-col items-center">
           <DestinationNav idParams={id} />
-        </div>
-        <article class="px-5">
-          <h5 class="heading-3 text-center mb-2">
+          <h5 class="heading-3 text-center mb-2 mt-4">
             {destination.name}
           </h5>
           <p class="body-text text-center mb-4">
@@ -61,7 +60,7 @@ const destination = destinations[id];
   }
 
   /* LG */
-  @media (min-width: 1024px) {
+  @media (min-width: 900px) {
     section {
       background-image: url("https://res.cloudinary.com/jurbina/image/upload/v1694194538/space-tourism/destination/background-destination-desktop_smixwy.jpg");
     }
