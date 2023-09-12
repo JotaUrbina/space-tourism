@@ -1,0 +1,28 @@
+---
+const links = [
+  "launch-vehicle",
+  "spaceport",
+  "space-capsule",
+];
+const { idParams } = Astro.props;
+---
+
+<div class="flex gap-4 mt-4">
+  {
+    links.map((link, i) => (
+      <a
+        href={link}
+        class:list={[
+          "w-12 h-12 text-2xl rounded-full flex justify-center items-center",
+          {
+            "bg-secondary": idParams === link,
+            "bg-transparent border border-gray-600 text-secondary":
+              idParams !== link,
+          },
+        ]}
+      >
+        {i + 1}
+      </a>
+    ))
+  }
+</div>

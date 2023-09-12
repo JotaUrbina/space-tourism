@@ -1,5 +1,6 @@
 ---
 import destinations from "../../public/destination.json";
+import DestinationNav from "./DestinationNav.astro";
 
 const { id } = Astro.params;
 const destination = destinations[id];
@@ -7,51 +8,62 @@ const destination = destinations[id];
 
 {
   (
-    <section>
-      <div class="max-w-sm">
-        <img
-          class="rounded-t-lg"
-          src={destination.img}
-          alt=""
-        />
-
-        <div class="p-5">
-          <h5 class="title-1">{destination.name}</h5>
-          <p
-            class="mb-3
-        font-normal
-        text-secondary"
-          >
+    <section class="screen">
+      <div class="w-full h-full grid grid-rows-2 gap-4">
+        <div class="mt-4 flex flex-col justify-between items-center">
+          <img
+            class="w-4/5 h-4/5 object-contain "
+            src={destination.img}
+            alt=""
+          />
+          <DestinationNav idParams={id} />
+        </div>
+        <article class="px-5">
+          <h5 class="heading-3 text-center mb-2">
+            {destination.name}
+          </h5>
+          <p class="body-text text-center mb-4">
             {destination.description}
           </p>
-        </div>
 
-        <div class="p-5">
-          <p
-            class="mb-3
-      font-normal
-      text-secondary"
-          >
+          <p class="subheading-2 text-center mb-2">
             AVG. DISTANCE
           </p>
-          <h5 class="text-4xl text-secondary">
+          <h5 class="heading-4 text-center mb-4">
             {destination.distance}
           </h5>
-        </div>
 
-        <div class="p-5">
-          <p
-            class="mb-3
-        font-normal
-        text-secondary"
-          >
+          <p class="subheading-2 text-center mb-2">
             EST. TRAVEL TIME
           </p>
-          <h5 class="text-4xl text-secondary">
+          <h5 class="heading-4 text-center mb-4">
             {destination.travelTime}
           </h5>
-        </div>
+        </article>
       </div>
     </section>
   )
 }
+
+<style>
+  section {
+    background-image: url("https://res.cloudinary.com/jurbina/image/upload/v1694194534/space-tourism/destination/background-destination-mobile_a45tsp.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* SM */
+  @media (min-width: 768px) {
+    section {
+      background-image: url("https://res.cloudinary.com/jurbina/image/upload/v1694194534/space-tourism/destination/background-destination-tablet_khbqqi.jpg");
+    }
+  }
+
+  /* LG */
+  @media (min-width: 1024px) {
+    section {
+      background-image: url("https://res.cloudinary.com/jurbina/image/upload/v1694194538/space-tourism/destination/background-destination-desktop_smixwy.jpg");
+    }
+  }
+</style>

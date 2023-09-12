@@ -1,0 +1,16 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import TechnologyCard from "../../components/TechnologyCard.astro";
+
+export const getStaticPaths = () => {
+  return [
+    { params: { id: "launch-vehicle" } },
+    { params: { id: "spaceport" } },
+    { params: { id: "space-capsule" } },
+  ];
+};
+---
+
+<Layout title="Technology">
+  <TechnologyCard />
+</Layout>

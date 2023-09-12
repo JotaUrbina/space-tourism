@@ -1,5 +1,6 @@
 ---
 import crew from "../../public/crew.json";
+import CrewNav from "../components/CrewNav.astro";
 
 const { id } = Astro.params;
 const employee = crew[id];
@@ -26,6 +27,7 @@ const employee = crew[id];
             {employee.description}
           </p>
         </div>
+        <CrewNav idParams={id} />
         <img
           class="rounded-t-lg"
           src={employee.img}

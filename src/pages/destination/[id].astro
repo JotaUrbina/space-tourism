@@ -1,10 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import DestinationNav from "../../components/DestinationNav.astro";
 import DestinationCard from "../../components/DestinationCard.astro";
-
-const { id } = Astro.params;
-// console.log(id);
 
 export const getStaticPaths = () => {
   return [
@@ -16,7 +12,6 @@ export const getStaticPaths = () => {
 };
 ---
 
-<Layout title="Destination 2">
-  <DestinationNav />
+<Layout title="Destinations">
   <DestinationCard />
 </Layout>

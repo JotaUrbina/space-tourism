@@ -6,6 +6,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
+      barlow: ["Barlow Condensed"],
       bellefair: ["Bellefair"],
     },
     colors: {

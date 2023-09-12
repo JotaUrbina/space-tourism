@@ -1,0 +1,32 @@
+---
+import technologies from "../../public/technology.json";
+import TechnologyNav from "./TechnologyNav.astro";
+
+const { id } = Astro.params;
+const technology = technologies[id];
+---
+
+{
+  (
+    <section>
+      <TechnologyNav idParams={id} />
+      <div class="max-w-sm">
+        <img
+          class="rounded-t-lg"
+          src={technology.img}
+          alt=""
+        />
+        <div class="p-5">
+          <h5 class="title-1">{technology.name}</h5>
+          <p
+            class="mb-3
+          font-normal
+          text-secondary"
+          >
+            {technology.description}
+          </p>
+        </div>
+      </div>
+    </section>
+  )
+}
