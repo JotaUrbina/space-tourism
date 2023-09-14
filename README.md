@@ -11,8 +11,8 @@ npm create astro@latest
 ## **Getting Started:**
 
 Download or clone the project and use the following commands from the terminal:
-|
-| :------------------------ | :----------------------------------------------- |
+| Command | Action |
+| :------------------------------- | :----------------------------------------------- |
 | `npm install` | To install dependencies |
 | `npm run dev` | To run locally. Starts local dev server at `localhost:4321` |
 | `npm run astro -- --help` | To get help using the Astro CLI |
