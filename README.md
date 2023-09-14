@@ -2,6 +2,8 @@
 
 ### Project developed to learn about Astro and get started with this technology.
 
+### [_Click me for live demo_](https://spacetourism-bs2.pages.dev/)
+
 # Initialized with [Astro.build](https://docs.astro.build/en/getting-started/)
 
 ```
