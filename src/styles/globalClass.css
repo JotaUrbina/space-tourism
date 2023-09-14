@@ -1,0 +1,43 @@
+.heading-1 {
+  @apply font-bellefair text-9xl text-secondary;
+}
+
+.heading-2 {
+  @apply font-bellefair text-8xl text-secondary;
+}
+
+.heading-3 {
+  @apply font-bellefair text-6xl text-secondary;
+}
+
+.heading-4 {
+  @apply font-bellefair text-3xl text-secondary;
+}
+
+.heading-5 {
+  @apply font-barlow text-2xl text-highlight tracking-widest;
+}
+
+.subheading-1 {
+  @apply font-bellefair text-2xl text-secondary md:text-5xl;
+}
+
+.subheading-2 {
+  @apply font-barlow text-sm text-highlight tracking-wide md:text-xl;
+}
+
+.nav-destination {
+  @apply font-barlow text-base text-highlight tracking-wide hover:border-b-2 hover:border-highlight;
+}
+
+.nav-text {
+  @apply font-barlow text-base text-secondary tracking-wide hover:border-b-2 sm:text-lg;
+}
+
+.body-text {
+  @apply font-barlow text-lg text-highlight;
+}
+
+.screen {
+  @apply w-screen h-full min-w-mob flex flex-col items-center justify-center mdd:h-screen mdd:items-start;
+}

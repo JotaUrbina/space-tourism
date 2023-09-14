@@ -4,10 +4,10 @@ const links = [
   "spaceport",
   "space-capsule",
 ];
-const { idParams } = Astro.props;
+const { idParams, tailwindClass } = Astro.props;
 ---
 
-<div class="flex gap-4 mt-4">
+<div class=`flex gap-4 ${tailwindClass}`>
   {
     links.map((link, i) => (
       <a

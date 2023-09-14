@@ -1,100 +1,28 @@
 ---
-// import Navbar from "../components/Navbar.astro";
 import Navbar from "../components/Navbar";
 import "@fontsource/barlow-condensed";
 import "@fontsource/bellefair";
 import { ViewTransitions } from "astro:transitions";
+import "../styles/globalClass.css";
 interface Props {
   title: string;
 }
-
 const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
     <meta name="generator" content={Astro.generator} />
     <ViewTransitions />
     <title>{title}</title>
   </head>
 
-  <body class="bg-primary overflow-x-hidden">
+  <body class="bg-primary overflow-x-hidden screen">
     <Navbar client:load />
     <slot />
-
-    <script
-      is:inline
-      src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
-    ></script>
-    <style is:global>
-      /* body {
-        background-image: url("https://res.cloudinary.com/jurbina/image/upload/v1694194537/space-tourism/home/background-home-mobile_x6xror.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-      } */
-
-      /* SM */
-      /* @media (min-width: 768px) {
-        body {
-          background-image: url("https://res.cloudinary.com/jurbina/image/upload/v1694194537/space-tourism/home/background-home-tablet_qq90h5.jpg");
-        }
-      } */
-
-      /* LG */
-      /* @media (min-width: 1024px) {
-        body {
-          background-image: url("https://res.cloudinary.com/jurbina/image/upload/v1694194537/space-tourism/home/background-home-desktop_wxbxtl.jpg");
-        }
-      } */
-      .heading-1 {
-        @apply font-bellefair text-9xl text-secondary;
-      }
-
-      .heading-2 {
-        @apply font-bellefair text-8xl text-secondary;
-      }
-
-      .heading-3 {
-        @apply font-bellefair text-6xl text-secondary;
-      }
-
-      .heading-4 {
-        @apply font-bellefair text-3xl text-secondary;
-      }
-
-      .heading-5 {
-        @apply font-barlow text-2xl text-highlight tracking-widest;
-      }
-
-      .subheading-1 {
-        @apply font-bellefair text-2xl text-secondary md:text-3xl;
-      }
-
-      .subheading-2 {
-        @apply font-barlow text-sm text-highlight tracking-wide md:text-xl;
-      }
-
-      .nav-destination {
-        @apply font-barlow text-base text-highlight tracking-wide hover:border-b-2 hover:border-highlight;
-      }
-
-      .nav-text {
-        @apply font-barlow text-base text-secondary tracking-wide hover:border-b-2 sm:text-lg;
-      }
-
-      .body-text {
-        @apply font-barlow text-lg text-highlight;
-      }
-
-      .screen {
-        @apply w-screen h-full flex items-center justify-center mdd:h-screen;
-      }
-    </style>
   </body>
 </html>

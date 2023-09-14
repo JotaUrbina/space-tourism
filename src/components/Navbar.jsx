@@ -21,8 +21,14 @@ const Navbar = () => {
   };
 
   return (
-    <header className="w-screen flex justify-between items-center px-8  border-gray-300/20 border-b">
-      <h2 className="text-2xl text-secondary">Menu</h2>
+    <header className="w-screen min-w-mob flex justify-between items-center px-8 fixed top-0">
+      <a href="/">
+        <img
+          src="https://res.cloudinary.com/jurbina/image/upload/v1694194536/space-tourism/shared/logo_hnc8bj.svg"
+          alt="Logo Space Tourism"
+          className="w-8 h-8"
+        />
+      </a>
       <nav className="h-12 md:w-1/2 flex items-center">
         <Bars3Icon
           className={`"h-8 w-8 text-secondary flex justify-center items-center md:hidden ${

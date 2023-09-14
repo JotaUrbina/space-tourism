@@ -8,21 +8,27 @@ const technology = technologies[id];
 
 {
   (
-    <section>
-      <TechnologyNav idParams={id} />
-      <div class="max-w-sm">
+    <section class="screen">
+      <h2 class="heading-5 mt-16 mb-2 mdd:m-0 mdd:absolute mdd:left-8 mdd:top-20">
+        03 SPACE LAUNCH 101
+      </h2>
+      <div class="w-full h-full max-w-lg grid grid-rows-[350px_70px_auto] mdd:h-1/2 mdd:px-4 mdd:grid-rows-auto mdd:grid-cols-[70px_auto_500px] place-items-center mdd:max-w-7xl">
         <img
-          class="rounded-t-lg"
+          class="w-full h-full object-cover mdd:col-start-3 mdd:row-start-1"
           src={technology.img}
           alt=""
         />
-        <div class="p-5">
-          <h5 class="title-1">{technology.name}</h5>
-          <p
-            class="mb-3
-          font-normal
-          text-secondary"
-          >
+        <TechnologyNav
+          idParams={id}
+          tailwindClass="mdd:flex-col mdd:col-start-1 mdd:row-start-1"
+        />
+
+        <div class="p-5 text-center row-start-3 flex flex-col items-center justify-center mdd:col-start-2 mdd:row-start-1 mdd:items-start">
+          <p class="subheading-2">THE TERMINOLOGY...</p>
+          <h5 class="subheading-1 mdd:text-left">
+            {technology.name}
+          </h5>
+          <p class="body-text text-center mdd:text-left">
             {technology.description}
           </p>
         </div>
@@ -30,3 +36,26 @@ const technology = technologies[id];
     </section>
   )
 }
+
+<style>
+  section {
+    background-image: url("https://res.cloudinary.com/jurbina/image/upload/v1694194538/space-tourism/technology/background-technology-mobile_iaelsr.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* MD */
+  @media (min-width: 768px) {
+    section {
+      background-image: url("https://res.cloudinary.com/jurbina/image/upload/v1694194539/space-tourism/technology/background-technology-tablet_frno47.jpg");
+    }
+  }
+
+  /* MDD */
+  @media (min-width: 900px) {
+    section {
+      background-image: url("https://res.cloudinary.com/jurbina/image/upload/v1694194540/space-tourism/technology/background-technology-desktop_mvykxa.jpg");
+    }
+  }
+</style>

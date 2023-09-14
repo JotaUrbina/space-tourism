@@ -5,6 +5,9 @@ module.exports = {
     "./node_modules/flowbite/**/*.js",
   ],
   theme: {
+    minWidth: {
+      mob: "375px",
+    },
     fontFamily: {
       barlow: ["Barlow Condensed"],
       bellefair: ["Bellefair"],

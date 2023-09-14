@@ -9,18 +9,21 @@ const employee = crew[id];
 {
   (
     <section class="screen">
-      <div class="w-full h-full max-w-lg grid grid-rows-[auto_50px_auto] place-items-center md:h-screen md:grid-rows-[1fr_50px_auto] mdd:h-3/4 mdd:grid-rows-[1fr_2fr] mdd:grid-cols-2 mdd:max-w-7xl">
-        <div class="p-5 text-center row-start-3 flex flex-col items-center justify-center md:row-start-1 mdd:col-start-2 mdd:row-start-2 mdd:self-start">
-          <p class="subheading-2 ">{employee.role}</p>
+      <h2 class="heading-5 mt-16 mb-2 mdd:m-0 mdd:absolute mdd:left-8 mdd:top-20">
+        02 MEET YOUR CREW
+      </h2>
+      <div class="w-full h-full max-w-lg grid grid-rows-[auto_50px_auto] place-items-center md:h-2/3 md:grid-rows-[1fr_50px_auto] mdd:h-3/4 mdd:grid-rows-[2fr_1fr] mdd:grid-cols-2 mdd:max-w-7xl">
+        <div class="p-5 text-center row-start-3 flex flex-col items-center justify-center md:row-start-1 mdd:col-start-1 mdd:row-start-1 mdd:self-end">
+          <p class="subheading-2">{employee.role}</p>
           <h5 class="subheading-1">{employee.name}</h5>
           <p class="body-text">{employee.description}</p>
         </div>
         <CrewNav
           idParams={id}
-          tailwindClass="mdd:self-end mdd:pb-4"
+          tailwindClass="mdd:self-start mdd:pb-4"
         />
         <img
-          class="row-start-1 w-3/4 h-3/4 object-contain md:row-start-3 md:full md:h-full mdd:row-start-1 mdd:row-span-2 mdd:self-center"
+          class="row-start-1 w-3/4 h-3/4 object-contain md:row-start-3 md:full md:h-full mdd:row-start-1 mdd:row-span-2 mdd:col-start-2 mdd:self-center"
           src={employee.img}
           alt=""
         />
@@ -28,3 +31,26 @@ const employee = crew[id];
     </section>
   )
 }
+
+<style>
+  section {
+    background-image: url("https://res.cloudinary.com/jurbina/image/upload/v1694194531/space-tourism/crew/background-crew-mobile_leafwb.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* MD */
+  @media (min-width: 768px) {
+    section {
+      background-image: url("https://res.cloudinary.com/jurbina/image/upload/v1694194530/space-tourism/crew/background-crew-tablet_qs6y8z.jpg");
+    }
+  }
+
+  /* MDD */
+  @media (min-width: 900px) {
+    section {
+      background-image: url("https://res.cloudinary.com/jurbina/image/upload/v1694194531/space-tourism/crew/background-crew-desktop_vd3kvd.jpg");
+    }
+  }
+</style>
